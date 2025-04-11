@@ -22,7 +22,7 @@ jobs:
       run: |
         ssh -o StrictHostKeyChecking=no ubuntu@3.27.104.4 << 'EOF'
           cd /var/www/html/CI-CD
-          git pull origin main
+          sudo git pull origin main
           sudo systemctl restart nginx
         EOF
       env:
